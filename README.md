@@ -1,6 +1,6 @@
 # Readme: productapi
 
-A demo application for product management for ingtech
+A demo application for product management 
 
 
 ## Requirements
