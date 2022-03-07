@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "39054596-b8d3-4a87-a793-22908fc32a55",
+		"name": "ingtech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addProduct",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "pass",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"active\": 1,\r\n  \"content\": \"lamp\",\r\n  \"name\": \"lamp\",\r\n  \"price\": 1,\r\n  \"updater\": 1,\r\n  \"version\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ingtech/product/addProduct",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ingtech",
+						"product",
+						"addProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changeProductPrice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ingtech/product/changeProductPrice/1/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ingtech",
+						"product",
+						"changeProductPrice",
+						"1",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/ingtech/product/getAllProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ingtech",
+						"product",
+						"getAllProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findProduct",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/ingtech/product/findProduct?productName=bulb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ingtech",
+						"product",
+						"findProduct"
+					],
+					"query": [
+						{
+							"key": "productName",
+							"value": "bulb"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
